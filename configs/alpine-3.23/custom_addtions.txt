@@ -1,0 +1,16 @@
+
+# Logging
+access_log /var/log/squid/access.log
+cache_log /var/log/squid/cache.log
+
+# Stealth - suppress proxy-identifying headers
+via off
+forwarded_for off
+request_header_access X-Forwarded-For deny all
+request_header_access Via deny all
+request_header_access From deny all
+reply_header_access Via deny all
+reply_header_access X-Cache deny all
+reply_header_access X-Cache-Lookup deny all
+reply_header_access X-Squid-Error deny all
+httpd_suppress_version_string on
