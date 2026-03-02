@@ -17,7 +17,7 @@ COPY configs/alpine-3.23/squid_configured.conf /etc/squid/squid.conf
 # ------------------------------------------------------------------------------
 # Add volumes
 VOLUME /var/log/squid
-VOLUME /var/cache/squid
+# VOLUME /var/cache/squid
 
 # ------------------------------------------------------------------------------
 # Expose ports
