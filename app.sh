@@ -1,3 +1,3 @@
 #!/bin/bash
 
-exec squid
+exec squid -N
